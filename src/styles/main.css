@@ -1,0 +1,132 @@
+body {
+  display: flex; /* Flexbox para centralizar o conteúdo */
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh; /* 100% da altura da viewport */
+  border: 1px solid red;
+  background-color: #e3f2fd;
+  color: white;
+}
+
+.container {
+  width: 780px;
+  border-radius: 20px;
+  padding: 100px 80px;
+  background-color: black;
+}
+
+.container header {
+  color: #b2b2b2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Espaço entre os elementos do header */
+}
+
+header h2 {
+  font-size: 1.6rem;
+}
+
+header {
+  display: flex;
+  align-items: center;
+}
+
+header .column span {
+  font-size: 1.19rem;
+  margin-right: 15px;
+  font-weight: 500;
+}
+
+.volume-slider input {
+  accent-color: #fff; /* Cor do controle deslizante */
+}
+
+.keys-check input {
+  width: 60px;
+  height: 30px;
+  appearance: none; /* Remove o estilo padrão do checkbox */
+  border-radius: 30px;
+  background-color: #4b4b4b;
+  cursor: pointer;
+  position: relative;
+}
+
+.keys-check input::before {
+  content: "";
+  position: absolute;
+  top: 50%; /* Centraliza verticalmente */
+  left: 0.3rem;
+  width: 20px;
+  height: 20px;
+  background-color: #8c8c8c;
+  border-radius: inherit; /* Mantém o raio de borda da div pai do checkbox */
+  transform: translateY(-50%); /* Centraliza verticalmente */
+  transition: all 0.3s ease; /* Transição suave para o movimento do botão */
+}
+
+.keys-check input:checked:before {
+  left: 2.1rem;
+  background-color: white;
+}
+
+.piano-keys {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.piano-keys .key {
+  cursor: pointer;
+  list-style: none;
+  color: #a2a2a2;
+  user-select: none; /* Impede a seleção de texto ao clicar nas teclas */
+  position: relative;
+  text-transform: uppercase;
+}
+
+.piano-keys .white {
+  width: 70px;
+  height: 230px;
+  background: linear-gradient(#fff 96%, #eeee 4%);
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.piano-keys .black {
+  width: 44px;
+  height: 140px;
+  z-index: 2;
+  background: linear-gradient(#333, #000);
+  border: 1px solid #ccc;
+  border-radius: 0 0 8px 8px;
+  margin: 0 -22px 0 -22px;
+}
+
+.piano-keys span {
+  display: block;
+  position: absolute; /* Posiciona o texto dentro da tecla */
+  text-align: center;
+  bottom: 20px;
+  width: 100%;
+  font-size: 1.13rem;
+}
+
+.piano-keys .white.active {
+  box-shadow: inset -5px 5px 20px rgba(0, 0, 0, 0.2); /* Efeito de sombra ao clicar */
+  background: linear-gradient(
+    to bottom #fff 0%,
+    #eeee 100%
+  ); /* Efeito de sombra ao clicar */
+}
+
+.piano-keys .black.active {
+  box-shadow: inset -5px 5px 20px rgba(255, 255, 255, 0.1); /* Efeito de sombra ao clicar */
+  background: linear-gradient(
+    to bottom #000,
+    #434343
+  ); /* Efeito de sombra ao clicar */
+}
+
+.piano-keys .key.hide span {
+  display: none; /* Esconde o texto da tecla */
+}
