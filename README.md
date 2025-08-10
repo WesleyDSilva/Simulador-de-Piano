@@ -5,7 +5,7 @@
 Um simples simulador de piano desenvolvido com **HTML**, **CSS** e **JavaScript**, permitindo tocar notas usando o mouse ou o teclado.
 
 ## 📸 Demonstração
-![Preview do Piano](./assets/images/preview.png)
+![Preview do Piano]([Clique aqui para acessar a aplicação](https://wesleydsilva.github.io/Simulador-de-Piano/))
 
 ## 🚀 Funcionalidades
 - Tocar notas clicando nas teclas com o mouse.
